@@ -1,0 +1,15 @@
+GET http://localhost:5000/api/goals
+
+###
+POST http://localhost:5000/api/goals
+Content-Type: application/json
+
+{
+    "text": ""
+}
+
+###
+PUT http://localhost:5000/api/goals/3
+
+###
+DELETE http://localhost:5000/api/goals/5
