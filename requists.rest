@@ -5,8 +5,11 @@ POST http://localhost:5000/api/goals
 Content-Type: application/json
 
 {
-    "text": "hello there"
+    "text": ""
 }
+###
+POST http://localhost:5000/api/users/login
+
 
 ###
 PUT http://localhost:5000/api/goals/62f95f7ed758b5245f1d3bb5
@@ -18,3 +21,22 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:5000/api/goals/62f961c5777e929f4e08560d
+
+###
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "name": "Awsan",
+    "email": "Awsan@gmail.com",
+    "password": "123"
+}
+
+###
+POST http://localhost:5000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "Awsan@gmail.com",
+    "password": "123"
+}

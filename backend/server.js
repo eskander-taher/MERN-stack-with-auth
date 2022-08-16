@@ -3,7 +3,6 @@ const color = require('colors')
 const cors = require('cors')
 const dotenv = require('dotenv').config()
 
-const goalRoutes = require('./routes/goalRoutes')
 const {errorHandler} = require('./middleware/errorMiddleware')
 const connectDB = require('./config/db')
 
@@ -18,7 +17,9 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
 
-app.use('/api/goals', goalRoutes)
+app.use('/api/goals', require('./routes/goalRoutes'))
+app.use('/api/users', require('./routes/userRoutes'))
+
 app.use(errorHandler)
 
 app.listen(port,()=>{ console.log(`running on port ${port}`) })
